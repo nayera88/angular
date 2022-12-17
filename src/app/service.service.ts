@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 export class ServiceService {
 
   constructor( private http:HttpClient) { }
-  private url ='http://172.30.126.68:8080/';
+  private url ='https://tools-git-tripproject.apps.eu410.prod.nextcle.com/';
 
   SignUp(user:any){
     return this.http.post(this.url + 'api/admin/signUp' , user);
