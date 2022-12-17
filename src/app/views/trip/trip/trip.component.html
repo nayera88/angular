@@ -1,0 +1,105 @@
+
+<div class="d-grid gap-5">
+<form class="row g-3">
+    <div class="col-md-5">
+      <label for="inputStart-time" class="form-label">startTime</label>
+      <input [(ngModel)]="trip.startTime" name="startTime" type="start_time" class="form-control" id="inputStart-time">
+    </div>
+    <div class="col-md-5">
+      <label for="inputEnd-time" class="form-label">EndTime</label>
+      <input [(ngModel)]="trip.endTime" name="endTime" type="end_time" class="form-control" id="inputEnd-time">
+    </div>
+    <div class="col-md-5">
+      <label for="inputFrom-station" class="form-label">FromStation</label>
+      <input  [(ngModel)]="trip.fromStation" name="fromStation" type="text" class="form-control" id="inputFrom-station" >
+    </div>
+    <div class="col-md-5">
+      <label for="inputTo-station" class="form-label">ToStation</label>
+      <input [(ngModel)]="trip.toStation" name="toStation" type="text" class="form-control" id="inputTo-station">
+    </div>
+    <div class="col-12">
+    <button (click)="Add()" type="submit" class="btn btn-primary">Create</button>
+    </div>
+  </form>
+
+
+  <form class="row g-3">
+    <div class="col-md-5">
+      <label for="inputID" class="form-label">ID</label>
+      <input [(ngModel)]="trip.id" name="id"  type="id" class="form-control" id="ID" placeholder="Enter The ID of trip to Update it">
+    </div>
+    <div class="col-12">
+      <button (click)="getTrip(trip.id)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Update</button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Trip Update</h1>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="col-md-6">
+            <label for="inputStart-time" class="form-label">startime</label>
+            <input  [(ngModel)]="trip.startTime" name="startTime" type="start_time" type="start_time" class="form-control" id="inputStart-time">
+          </div>
+          <div class="col-md-6">
+            <label for="inputEnd-time" class="form-label">End_time</label>
+            <input [(ngModel)]="trip.endTime" name="endTime" type="end_time" type="end_time" class="form-control" id="inputEnd-time">
+          </div>
+          <div class="col-md-6">
+            <label for="inputFrom-station" class="form-label">FromStation</label>
+            <input [(ngModel)]="trip.fromStation" name="fromStation" type="text" class="form-control" id="inputFrom-station" >
+          </div>
+          <div class="col-md-6">
+            <label for="inputTo-station" class="form-label">ToStation</label>
+            <input [(ngModel)]="trip.toStation" name="toStation"  type="text" class="form-control" id="inputTo-station">
+          </div>
+      
+        </form>
+       </div>
+       <div class="modal-footer">
+        <button (click)="Update(trip.id, trip)"  type="button"  class="btn btn-primary">Update</button>
+       </div>
+    </div>
+   </div>
+    </div>
+    </div>
+  </form>
+
+    <form class="row g-3">
+        <div class="col-md-5">
+          <label for="inputID" class="form-label">ID</label>
+          <input [(ngModel)]="trip.id" name="id"  type="id" type="id" class="form-control" id="ID" placeholder="Enter The ID of trip to delete it">
+        </div>
+        <div class="col-12">
+          <button (click)="Delete(trip.id)" type="submit" class="btn btn-primary">Delete</button>
+        </div>
+      </form>
+
+
+      <div class="col-24">
+    
+      <button (click)="ShowTrips()" type="submit" class="btn btn-primary">Show All Scheduled Trips</button>
+      </div>
+      
+      
+      <div class="row mt-1">
+    
+        <div class="col-2" *ngFor="let item of trips">
+                   
+                  <h6> Station id: </h6>
+                    <p>{{item.id}}</p>
+                    <h6> Start_time: </h6>
+                    <P>{{item.startTime}}</P>
+                    <h6> End_time: </h6>
+                    <P>{{item.endTime}}</P>
+                    <h6> From_station: </h6>
+                    <P>{{item.fromStation}}</P>
+                    <h6> To_station: </h6>
+                    <P>{{item.toStation}}</P>
+        </div>
+      </div>
+    </div>
+
+
+

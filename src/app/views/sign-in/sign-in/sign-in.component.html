@@ -1,0 +1,14 @@
+
+<form>
+  
+<div class="col-md-3">
+<input [(ngModel)]="user.username" name="username" class="form-control" type="text" placeholder="UserName" >
+<input [(ngModel)]="user.password" name="password" class="form-control" type="text"   placeholder="Password" value="Password" >
+<ul class="nav">
+  <li class="nav-item"> 
+  <a class="nav-link active" href="http://localhost:4200/user">
+  <button (click)="SignIn()" type="button" class="btn btn-primary form-control m-1" >Login</button>
+  </a>
+</ul>
+  </div>
+</form>

@@ -1,0 +1,50 @@
+
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">TripScheduling</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" routerLink="/">SignIn</a>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">SignUP</button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create new account</h1>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="col-form-label">Name:</label>
+            <input [(ngModel)]="user.name" name="name" type="text" class="form-control" id="name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="col-form-label">Email:</label>
+            <input [(ngModel)]="user.email" name="email" type="text" class="form-control" id="email">
+          </div>
+          <div class="mb-3">
+            <label for="username" class="col-form-label">UserName:</label>
+            <input [(ngModel)]="user.username" name="username"type="text" class="form-control" id="username">
+          </div>
+          <div class="mb-3">
+            <label for="password" class="col-form-label">Password:</label>
+            <input [(ngModel)]="user.password" name="password" type="password" class="form-control" id="password">
+          </div>
+      
+        </form>
+       </div>
+       <div class="modal-footer">
+        <button (click)="SignUp()" type="button" data-dismiss="modal" class="btn btn-primary">Create account</button>
+       </div>
+    </div>
+   </div>
+    </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+

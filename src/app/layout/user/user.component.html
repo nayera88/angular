@@ -1,0 +1,14 @@
+<div class="d-flex align-items-start">
+    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+     
+      <button class="nav-link active" routerLink="/user/trip" id="v-pills-trip-tab" data-bs-toggle="pill" data-bs-target="#v-pills-trip" type="button" role="tab" aria-controls="v-pills-trip" aria-selected="false">Trip</button>
+      <button class="nav-link" routerLink="/user/station" id="v-pills-station-tab" data-bs-toggle="pill" data-bs-target="#v-pills-station" type="button" role="tab" aria-controls="v-pills-station" aria-selected="false" >Station</button>
+      
+    <div class="tab-content" id="v-pills-tabContent">
+      
+      <div class="tab-pane fade show active" id="v-pills-trip" role="tabpanel" aria-labelledby="v-pills-trip-tab" tabindex="0">...</div>
+      <div class="tab-pane fade" id="v-pills-station" role="tabpanel" aria-labelledby="v-pills-station-tab" tabindex="0">...</div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>

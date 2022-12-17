@@ -1,0 +1,16 @@
+
+  
+  <div class="row mt-1">
+    
+    <div class="col-2" style="width:10rem; height:8rem;" *ngFor="let item of stations">
+        
+           
+                <h6> Station Name: </h6>
+                <p>{{item.name}}</p>
+                <h6> Station id: </h6>
+                <P>{{item.id}}</P>
+    </div>
+  </div>
+  
+  <button (click)="ShowStation()"  type="button" class="btn btn-primary btn-lg center" >Show All Station</button>
+  
